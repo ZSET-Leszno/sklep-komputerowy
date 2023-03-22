@@ -1,5 +1,14 @@
+import { Fragment } from "react";
+import NavMenu from "./components/HeaderNav/NavMenu";
+
 function App() {
-  return <div>dhsuaj</div>;
+  return (
+    <Fragment>
+      <header>
+        <NavMenu />
+      </header>
+    </Fragment>
+  );
 }
 
 export default App;
