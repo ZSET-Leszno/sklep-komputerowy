@@ -1,0 +1,12 @@
+.button {
+  background: none;
+  border: none;
+  font-size: 1.7em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.button:active {
+  background-color: rgb(95, 94, 94);
+}

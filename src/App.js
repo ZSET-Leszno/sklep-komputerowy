@@ -1,3 +1,5 @@
+import "./App.css";
+
 import { Fragment } from "react";
 import NavMenu from "./components/HeaderNav/NavMenu";
 

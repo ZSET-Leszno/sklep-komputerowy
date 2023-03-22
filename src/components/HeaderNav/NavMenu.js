@@ -2,42 +2,37 @@ import { useState } from "react";
 
 import classes from "./NavMenu.module.css";
 
-import { AiOutlineUser, AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
 import { HiMenu, HiOutlineMenuAlt1 } from "react-icons/hi";
 import ButtonMenu from "../UI/ButtonMenu";
-import NavMenuItem from "./NavMenuItem";
+import NavMenuList from "./NavList/NavMenuList";
 
 const NavMenu = (props) => {
   const [hideNav, setHideNav] = useState(true);
 
   const elements = [
-    { id: 0, type: "mice" },
-    { id: 1, type: "keyboard" },
-    { id: 2, type: "headsets" },
-    { id: 3, type: "mausepads" },
+    { id: 0, type: "Mice" },
+    { id: 1, type: "Keyboard" },
+    { id: 2, type: "Headsets" },
+    { id: 3, type: "Mausepads" },
   ];
 
   const showHideNavHandler = () => {
     setHideNav((prevShn) => !prevShn);
   };
 
-  const NavMenuItems = elements.map((item) => (
-    <NavMenuItem key={item.id}>{item.type}</NavMenuItem>
-  ));
-
   return (
-    <nav>
-      <div>
-        <ButtonMenu onClick={showHideNavHandler}>
-          {hideNav ? <HiOutlineMenuAlt1 /> : <HiMenu />}
-        </ButtonMenu>
-        {hideNav && <ul>{NavMenuItems}</ul>}
-      </div>
+    <nav className={classes.nav}>
+      <ButtonMenu onClick={showHideNavHandler}>
+        {hideNav ? <HiOutlineMenuAlt1 /> : <HiMenu />}
+      </ButtonMenu>
+      {hideNav && <NavMenuList elements={elements} />}
+
       <h1>Smierdziel-Company</h1>
-      <div>
-        <AiOutlineUser />
+
+      <ButtonMenu>
         <AiOutlineShoppingCart />
-      </div>
+      </ButtonMenu>
     </nav>
   );
 };
