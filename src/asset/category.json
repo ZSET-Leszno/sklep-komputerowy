@@ -1,0 +1,24 @@
+{
+  "category": [
+    {
+      "id": "c1",
+      "img": "myszkaCAT.png",
+      "name": "Mice"
+    },
+    {
+      "id": "c2",
+      "img": "KlawaCAT.png",
+      "name": "Keyboards"
+    },
+    {
+      "id": "c3",
+      "img": "sluchawkiCAT.png",
+      "name": "Headsets"
+    },
+    {
+      "id": "c4",
+      "img": "pokdladkaCAT.png",
+      "name": "Mausepads"
+    }
+  ]
+}

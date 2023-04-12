@@ -1,0 +1,16 @@
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, 60px);
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.product {
+  width: fit-content;
+}
+
+.product img {
+  width: 100px;
+}
