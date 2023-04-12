@@ -4,18 +4,12 @@ const useHtml = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  const sendRequest = useCallback(async (url, callBack, item) => {
+  const sendRequest = useCallback(async (requestConfig, callBack) => {
     setIsLoading(true);
     setError(true);
 
     try {
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(item),
-      });
+      const response = await fetch(requestConfig.url);
 
       if (!response.ok) {
         throw new Error("blad przez wiktora");

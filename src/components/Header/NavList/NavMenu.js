@@ -6,6 +6,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { HiMenu, HiOutlineMenuAlt1 } from "react-icons/hi";
 import ButtonMenu from "../../UI/ButtonMenu";
 import NavMenuList from "./NavMenuList";
+import logo from "../../../asset/logo.png";
 
 const NavMenu = (props) => {
   const [hideNav, setHideNav] = useState(true);
@@ -21,7 +22,7 @@ const NavMenu = (props) => {
       </ButtonMenu>
       {!hideNav && <NavMenuList />}
 
-      <h1>Smierdziel-Company</h1>
+      {/* <img src={logo} alt="logo" /> */}
 
       <ButtonMenu>
         <AiOutlineShoppingCart />

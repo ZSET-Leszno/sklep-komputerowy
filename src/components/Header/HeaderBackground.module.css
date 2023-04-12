@@ -13,5 +13,12 @@
 }
 
 .info {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  font-size: 0.8em;
+  transform: translateX(-50%);
   background-color: #5d4273;
+  padding: 0.5rem 1rem;
+  border-radius: 0.7rem;
 }
